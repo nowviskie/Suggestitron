@@ -11,11 +11,13 @@
 
 <% @topics.each do |topic| %>
   <tr>
+    <td><%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post %></td> 
     <td><%= link_to(topic.title, topic) %></td>
     <td><%= topic.description %></td>
     <td><%= link_to 'Show', topic %></td>
     <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
     <td><%= link_to 'Destroy', topic, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= pluralize(topic.votes.length, "Vote") %></td>
   </tr>
 <% end %>
 </table>
