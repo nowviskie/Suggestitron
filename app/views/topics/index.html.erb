@@ -1,9 +1,10 @@
-<h1>Listing topics</h1>
+<h1>Suggestions</h1>
 
 <table>
   <tr>
-    <th>Title</th>
-    <th>Description</th>
+    <th></th>
+    <th>When discussing...</th>
+    <th>Waynebot should say...</th>
     <th></th>
     <th></th>
     <th></th>
@@ -14,9 +15,8 @@
     <td><%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post %></td> 
     <td><%= link_to(topic.title, topic) %></td>
     <td><%= topic.description %></td>
-    <td><%= link_to 'Show', topic %></td>
     <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-    <td><%= link_to 'Destroy', topic, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Erase', topic, confirm: 'Really delete this suggestion?', method: :delete %></td>
     <td><%= pluralize(topic.votes.length, "Vote") %></td>
   </tr>
 <% end %>
@@ -24,4 +24,4 @@
 
 <br />
 
-<%= link_to 'New Topic', new_topic_path %>
+<%= link_to 'Suggest one!', new_topic_path %>
