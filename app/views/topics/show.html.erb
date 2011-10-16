@@ -17,4 +17,5 @@
 </p>
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Erase', @topic, confirm: 'Wait a minute! Really delete this suggestion?', method: :delete %> |
 <%= link_to 'Back', topics_path %>
