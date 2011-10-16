@@ -1,11 +1,11 @@
-<h1>Suggestions</h1>
+<h2>Suggestions for the Waynebot</h2>
 
 <table>
   <tr>
-    <th></th>
+    <th>Vote!</th>
     <th>When discussing...</th>
     <th>Waynebot should say...</th>
-    <th></th>
+    <th><span style="font-size:x-large">&#x2665;</span></th>
     <th></th>
     <th></th>
   </tr>
@@ -14,10 +14,10 @@
   <tr>
     <td><%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post %></td> 
     <td><%= link_to(topic.title, topic) %></td>
-    <td><%= topic.description %></td>
+    <td><%= '"' + topic.description + '"' %></td>
+    <td><%= pluralize(topic.votes.length, "vote") %></td>
     <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-    <td><%= link_to 'Erase', topic, confirm: 'Really delete this suggestion?', method: :delete %></td>
-    <td><%= pluralize(topic.votes.length, "Vote") %></td>
+    <td><%= link_to 'Erase', topic, confirm: 'Wait a minute! Really delete this suggestion?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
