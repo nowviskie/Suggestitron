@@ -1,9 +1,9 @@
 body {
   background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
+  color: #444;
+  font-family: 'Orbitron', verdana, arial, helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 22px; }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -18,10 +18,13 @@ pre {
 a {
   color: #000;
   &:visited {
-    color: #666; }
+    color: #000; }
   &:hover {
-    color: #fff;
-    background-color: #000; } }
+    color: #A80000; } }
+
+.heart {
+  color: #A80000;
+  font-size: x-large; }
 
 div {
   &.field, &.actions {
