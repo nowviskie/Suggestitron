@@ -7,6 +7,7 @@ class VotesController < ApplicationController
     else
       flash[:message] = 'oh noes!'
     end
-    redirect_to(topics_path)
+    #redirect_to(topics_path)
+     redirect_to :back
   end
 end
