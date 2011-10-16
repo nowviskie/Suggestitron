@@ -16,8 +16,8 @@
 <% @topics.each do |topic| %>
   <tr>
     <td><%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post %></td> 
-    <td><%= link_to(topic.title, topic) %></td>
-    <td><%= '"' + topic.description + '"' %></td>
+    <td><%= topic.title %></td>
+    <td>"<%= link_to(topic.description, topic) %>"</td>
     <td><%= pluralize(topic.votes.length, "vote") %></td>
     <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
     <td><%= link_to 'Erase', topic, confirm: 'Wait a minute! Really delete this suggestion?', method: :delete %></td>
