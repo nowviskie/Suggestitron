@@ -13,9 +13,9 @@
 </p>
 
 <p>
-<b>Votes:</b>
-  <%= @topic.votes.length %>  
-  <%= link_to '+1', votes_path(:topic_id => @topic), :method => :post %>
+<b><span class="heart">&#x2665;</span>'s</b>
+  <%= @topic.votes.length %> | Add your
+  <%= link_to '+1', votes_path(:topic_id => @topic), :method => :post %>.
 </p>
 
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
