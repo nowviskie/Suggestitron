@@ -1,5 +1,7 @@
+<div class="main blurb">
 <p id="notice"><%= notice %></p>
 
+<h2>Words of Wisdom</h2>
 <p>
   <b>When discussing...</b>
   <%= @topic.title %>
@@ -7,7 +9,7 @@
 
 <p>
   <b>Waynebot should say...</b>
-  <%= @topic.description %>
+  &#8220;<%= @topic.description %>&#8221;
 </p>
 
 <p>
@@ -19,3 +21,4 @@
 <%= link_to 'Edit', edit_topic_path(@topic) %> |
 <%= link_to 'Erase', @topic, confirm: 'Wait a minute! Really delete this suggestion?', method: :delete %> |
 <%= link_to 'Back', topics_path %>
+</div>
