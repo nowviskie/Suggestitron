@@ -1,4 +1,4 @@
-## Waynebot Suggestitron
+## DH Karaoke Suggestitron
 
-Just a little sample Rails application created as part of the pre-Prism tutorials in the Scholars' Lab's [Praxis Program](http://praxis.scholarslab.org/), 2011.
-Live version [is up](http://waynebot.herokuapp.com) on Heroku. 
+Just a little sample Rails application created as a tutorial for the Scholars' Lab's [Praxis Program](http://praxis.scholarslab.org/).
+One version is up as the [Waynebot Suggestitron](http://waynebot.herokuapp.com), and this version is live here: [http://DHoke.herokuapp.com/](http://DHoke.herokuapp.com/).
