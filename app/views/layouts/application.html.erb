@@ -7,11 +7,12 @@
   <%= csrf_meta_tags %>
   <link href='http://fonts.googleapis.com/css?family=Orbitron:700,400' rel='stylesheet' type='text/css'> 
   <style media="screen">
-body {
+html, body {
   color: #444;
   font-family: 'Orbitron', verdana, arial, helvetica, sans-serif;
   font-size: 14px;
   line-height: 22px;
+  height:100%;
   background-image:url('http://nowviskie.org/images/mic.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -34,6 +35,10 @@ a:hover {
   filter:alpha(opacity=80); }
 .blurb {
   width: 40%; }
+.container {
+  min-height: 100%;
+  position:relative;
+}
 .footer {
   position: absolute;
   bottom: 0
@@ -41,8 +46,9 @@ a:hover {
   </style>
 </head>
 <body>
-
+  <div class="container">
 <%= yield %>
 <div class="footer"><p><em>(Get the <a href="http://github.com/nowviskie/Suggestitron">code</a>.)</em></p></div>
+</div> 
 </body>
 </html>
