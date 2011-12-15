@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.3'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -16,6 +16,7 @@ end
 
 gem 'jquery-rails'
 
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -27,6 +28,8 @@ gem 'jquery-rails'
 
 group :development, :test do 
   gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'nyan-cat-formatter', '~> 0.0.3'
 end
 
 group :production do

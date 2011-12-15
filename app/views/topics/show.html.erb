@@ -1,23 +1,27 @@
 <div class="main blurb">
-<p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p>
 
-<h2>It's a dream come true!</h2>
-<p>
+  <h2>It's a dream come true!</h2>
+  <p>
   <b>Esteemed digital humanist...</b>
   <%= @topic.title %>
-</p>
+  </p>
 
-<p>
+  <p>
   <b>Now sings for you...</b>
   &#8220;<%= @topic.description %>&#8221;
-</p>
-
-<p>
-<b><span class="heart">&#x2665;</span>'s</b>
+  </p>
+  <% if(@topic.url.strip.length > 0) %>
+    <p>
+    <%= youtube_embed(@topic.url).html_safe %>
+    </p>
+  <% end %>
+  <p>
+  <b><span class="heart">&#x2665;</span>'s</b>
   <%= @topic.votes.length %> | Add your
   <%= link_to '+1', votes_path(:topic_id => @topic), :method => :post %>.
-</p>
+  </p>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> | 
-<%= link_to 'Back', topics_path %>
+  <%= link_to 'Edit', edit_topic_path(@topic) %> | 
+  <%= link_to 'Back', topics_path %>
 </div>
