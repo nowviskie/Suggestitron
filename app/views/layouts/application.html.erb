@@ -34,11 +34,15 @@ a:hover {
   filter:alpha(opacity=80); }
 .blurb {
   width: 40%; }
+.footer {
+  position: absolute;
+  bottom: 0
+}
   </style>
 </head>
 <body>
 
 <%= yield %>
-
+<div class="footer"><p><em>(Get the <a href="http://github.com/nowviskie/Suggestitron">code</a>.)</em></p></div>
 </body>
 </html>
