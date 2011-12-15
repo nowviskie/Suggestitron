@@ -27,7 +27,7 @@ gem 'jquery-rails'
 
 group :development, :test do 
   gem 'sqlite3'
-  gem 'rspec-rails', '~> 1.3.0'
+  gem 'rspec-rails'
   gem 'nyan-cat-formatter', '~> 0.0.3'
 end
 
