@@ -1,10 +1,13 @@
 <div class="main blurb">
 <h2>Edit Suggestion</h2>
 
-<p>(Not entirely fair, you know! This does not re-set votes.)</p>
+<strong>Not entirely fair, you know! This does not re-set votes.</strong>
+<p>However, it's open to anyone, to prevent egregious abuse.  You know, like if somebody suggested Dan Cohen sing "Candle in the Wind."</p>
 
-<%= render 'form' %>
 
-<%= link_to 'Just Display Me', @topic %> |
-<%= link_to 'Back', topics_path %>
+<h3><%= render 'form' %></h3>
+
+<%= link_to 'Destroy Me', @topic, confirm: 'Wait a minute! Really delete this one?', method: :delete %> |
+<%= link_to 'Display Me', @topic %> |
+<%= link_to 'Back to List', topics_path %>
 <div class="main blurb">

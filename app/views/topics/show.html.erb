@@ -1,14 +1,14 @@
 <div class="main blurb">
 <p id="notice"><%= notice %></p>
 
-<h2>Words of Wisdom</h2>
+<h2>It's a dream come true!</h2>
 <p>
-  <b>When discussing...</b>
+  <b>Esteemed digital humanist...</b>
   <%= @topic.title %>
 </p>
 
 <p>
-  <b>Waynebot should say...</b>
+  <b>Now sings for you...</b>
   &#8220;<%= @topic.description %>&#8221;
 </p>
 
@@ -18,7 +18,6 @@
   <%= link_to '+1', votes_path(:topic_id => @topic), :method => :post %>.
 </p>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Erase', @topic, confirm: 'Wait a minute! Really delete this suggestion?', method: :delete %> |
+<%= link_to 'Edit', edit_topic_path(@topic) %> | 
 <%= link_to 'Back', topics_path %>
 </div>

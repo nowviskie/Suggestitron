@@ -1,13 +1,13 @@
 <div class="main">
-<h1>Faster, better, stronger.</h1>
-<h2>Can we help the Waynebot pass a Turing Test?</h2>
+<h2>It's time to play...</h2>
+<h1>Digital Humanities Dream Karaoke!</h1>
 
-<p>Suggest and vote on Wayne-isms that should be incorporated into the Waynebot on #slab IRC.</p>
+<p></p>
 
 <table>
   <tr>
-    <th>When discussing...</th>
-    <th>Waynebot should say...</th>
+    <th>This esteemed DHer...</th>
+    <th>Should sing...</th>
     <th><span class="heart">&#x2665;</span></th>
   </tr>
 
@@ -15,13 +15,13 @@
   <tr>
     <td><%= topic.title %></td>
     <td>"<%= link_to(topic.description, topic) %>"</td>
-    <td><%= pluralize(topic.votes.length, "vote") %>&nbsp;/&nbsp;<%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post %></td> 
+    <td>&nbsp;<%= pluralize(topic.votes.length, "vote") %>&nbsp;/&nbsp;<%= link_to '+1', votes_path(:topic_id => topic.id), :method => :post %></td> 
   </td>
   </tr>
 <% end %>
 </table>
 
-<h3><%= link_to 'Suggest one!', new_topic_path %></h3>
+<h3><%= link_to 'Who\'s Up Next?', new_topic_path %></h3>
 
-<p><em>This is NOT a project of the <a href="http://scholarslab.org">Scholars' Lab</a>. Seriously, we don't know what you're talking about.  Neither is <a href="http://waynebot.com">this</a>.</em></p>
+<p><em>Happy Holidays from your friends at the <a href="http://scholarslab.org">Scholars' Lab</a>.</em></p>
 </div>
