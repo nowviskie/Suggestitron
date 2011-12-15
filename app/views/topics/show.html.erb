@@ -11,13 +11,13 @@
   <b>Now sings for you...</b>
   &#8220;<%= @topic.description %>&#8221;
   </p>
-  <% if(@topic.url.strip.length > 0) %>
+  <% unless(@topic.url.nil?) %>
     <p>
     <%= youtube_embed(@topic.url).html_safe %>
     </p>
   <% end %>
   <p>
-  <b><span class="heart">&#x2665;</span>'s</b>
+  <strong><span class="heart">&#x2665;</span>'s</strong>
   <%= @topic.votes.length %> | Add your
   <%= link_to '+1', votes_path(:topic_id => @topic), :method => :post %>.
   </p>

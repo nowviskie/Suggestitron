@@ -13,6 +13,12 @@
 
 ActiveRecord::Schema.define(:version => 20111215185950) do
 
+  create_table "bands", :force => true do |t|
+    t.integer  "topic_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "topics", :force => true do |t|
     t.string   "title"
     t.text     "description"
