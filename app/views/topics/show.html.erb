@@ -10,8 +10,10 @@
 <p>
   <b>Now sings for you...</b>
   &#8220;<%= @topic.description %>&#8221;
-</p>
-
+  </p>
+  <p>
+  <%= youtube_embed(@topic.url).html_safe %>
+  </p>
 <p>
 <b><span class="heart">&#x2665;</span>'s</b>
   <%= @topic.votes.length %> | Add your
