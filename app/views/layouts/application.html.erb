@@ -48,6 +48,12 @@ a:hover {
 </head>
 <body>
   <div class="container">
+    <%= form_tag request.path, :method => 'get' do %>
+      <% content_tag :label do %>
+    Singer:
+    <%= text_field_tag :search, params[:search] %>
+  <% end %>
+<% end %>
 <%= yield %>
 <div class="footer"><p><em>(Get the <a href="http://github.com/nowviskie/Suggestitron">code</a>.)</em></p></div>
 </div> 

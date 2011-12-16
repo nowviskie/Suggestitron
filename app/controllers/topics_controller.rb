@@ -2,7 +2,8 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all
+
+    @topics = Topic.search(params[:search], params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
